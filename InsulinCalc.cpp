@@ -11,7 +11,7 @@ int InsulinCarbRatio;
 int goal;
 int SFactor;
 
-//main
+
 int main()
 {
     std::cout << "How many carbs are you/were you eating?\n";
@@ -30,4 +30,7 @@ int main()
     std::cin >> goal;
 
     std::cout << (carbs/InsulinCarbRatio)+((sugar-goal)/SFactor);
+
+    std::cin.get();
+    std::cin.get();
 }
