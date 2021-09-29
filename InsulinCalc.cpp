@@ -1,35 +1,32 @@
-// InsulinCalc.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
+/* InsulinCalc.cpp : This file contains the 'main' function. Program execution begins and ends there. */
 
 #include <iostream>
+using namespace std;
 
-// data
-int carbs;
-int sugar;
-int InsulinCarbRatio;
-int goal;
-int SFactor;
+float carbs;
+float sugar;
+float InsulinCarbRatio;
+float goal;
+float SFactor;
+float output;
 
+int main() {
+    cout << "How many carbs are you/were you eating?\n";
+    cin >> carbs;
 
-int main()
-{
-    std::cout << "How many carbs are you/were you eating?\n";
-    std::cin >> carbs;
+    cout << "What is your Glucose Level (before eating)?\n";
+    cin >> sugar;
 
-    std::cout << "What is your Glucose Level (before eating)?\n";
-    std::cin >> sugar;
+    cout << "How many carbs per unit?\n";
+    cin >> InsulinCarbRatio;
 
-    std::cout << "How many carbs per unit?\n";
-    std::cin >> InsulinCarbRatio;
+    cout << "What is your sensitivity factor?\n";
+    cin >> SFactor;
 
-    std::cout << "What is your sensitivity factor?\n";
-    std::cin >> SFactor;
+    cout << "What is your goal glucose level?\n";
+    cin >> goal;
 
-    std::cout << "What is your goal glucose level?\n";
-    std::cin >> goal;
-
-    std::cout << (carbs/InsulinCarbRatio)+((sugar-goal)/SFactor);
-
-    std::cin.get();
-    std::cin.get();
+    output = (carbs/InsulinCarbRatio)+((sugar-goal)/SFactor);
+    cout << "Output: " << output << "\n";
+    return 0;
 }
